@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Manual de uso do Git para Estat",
+    "section": "",
+    "text": "Prefácio\nA ideia é familiarizar as squads a trabalharem com GitHub em seus projetos e proporcionar um material de consulta própria para todos integrantes da Estat-MG.\nEste manual contém explicações resumidas sobre:"
+  },
+  {
+    "objectID": "index.html#atalho-para-tópicos-importantes",
+    "href": "index.html#atalho-para-tópicos-importantes",
+    "title": "Manual de uso do Git para Estat",
+    "section": "Atalho para tópicos importantes:",
+    "text": "Atalho para tópicos importantes:\nIr direto para uso do Git pelo terminal do R:\nGit no R\nAlguns comandos da linguagem Git:\nComandos git"
+  },
+  {
+    "objectID": "index.html#materiais-de-apoio---excluir-depois",
+    "href": "index.html#materiais-de-apoio---excluir-depois",
+    "title": "Manual de uso do Git para Estat",
+    "section": "Materiais de apoio - excluir depois",
+    "text": "Materiais de apoio - excluir depois\nTo learn more about Quarto books visit https://quarto.org/docs/books.\nDica para publicar no Rstudio COnect https://quarto.org/docs/publishing/\nDicas de edição https://r4ds.hadley.nz/quarto.html\nDicas de notas https://quarto.org/docs/authoring/callouts.html"
+  },
+  {
+    "objectID": "intro.html#git-e-github",
+    "href": "intro.html#git-e-github",
+    "title": "1  Introdução",
+    "section": "1.1 Git e GitHub",
+    "text": "1.1 Git e GitHub\nAssim como o R é a linguagem de programação compilada pelo Rstudio, o Git é a linguagem usada pelo site do GitHub para fazer versionamento e backup de códigos além de proporcionar o trabalho em equipe de forma mais eficiente."
+  },
+  {
+    "objectID": "intro.html#vocabulário-importante",
+    "href": "intro.html#vocabulário-importante",
+    "title": "1  Introdução",
+    "section": "1.2 Vocabulário importante",
+    "text": "1.2 Vocabulário importante\n\nVersionamento: Versionar um código ou fazer controle de versão de um código nada mais é que registrar as etapas da contrução de uma aplicação, registrar alterações e conseguir retornar a versões anteriores que foram versionadas.\nRepositório: nada mais é que uma pasta que é monitorada pelo git. É usual dizer repositório remoto referindo-se a pasta versionada no GitHub e repositório local a pasta no ambiente local.\nCommit: quando deseja-se adicionar, editar ou remover arquivos, o commit é o que registra essas mudanças. Ou seja, o registro das alterações é um commit\nClone: fazer download do repositório para fazer alterações e seus próprios commits\nFork:\nBranchs: são os galhos da aplicação. Uma vez que dividimos a construção de um código em etapas é comum vermos branchs do tipo main que indica o que está em uso, ou seja, o código principal. No contexto da empresa, seria o código mais oficial sem aqueles bugs que encontramos na parte de desenvolvimento de um código. Daí outra branch, develop, também dita feature, que é o galho onde fixamos o desenvolvimento de novas aplicações, funções, até testes de desenvolvimento e etc. Há outras brachs, como específica para corrigir erros, mas podemos resumir em 2 práticas para empresa.\n\n\n\n\n\n\n\nNota:\n\n\n\nTambém verá a branch main sendo chamada de master, porém está em desuso por ter uma origem racista. Convencionou-se usar main nos textos mais atuais. VScode e outras IDE’s já usam só main.\n\n\n\nImagem mostra como seria a dinâmica de branchs main, feature e bug\n\nMerge: processo de mesclar commits feitos em uma branch para outro. Normalmente quando se faz uma aplicação na branch develop e deseja-se disponibilizar a alteração feita na main.\nPush: envia arquivos locais para o ambiente remoto\n\n\n\n\n\n\n\nNota:\n\n\n\nO macete mais famoso que é visto por aí é que push não puxa, ou seja, push não traz arquivos do ambiente remoto para o local, logo, push empurra os arquivos do ambiente local para remoto.\n\n\n\nPull: atualiza seu repositório local com o arquivo mais recente do repositório remoto\nPull Request:\nConflito:\nTag: descrição do commit feito, ex: “exportando dados”. Veremos em Boas práticas como colocar tags relevantes.\nIssues:"
+  },
+  {
+    "objectID": "summary.html#criação-de-conta-github",
+    "href": "summary.html#criação-de-conta-github",
+    "title": "2  Configurações Iniciais",
+    "section": "2.1 Criação de conta GitHub",
+    "text": "2.1 Criação de conta GitHub\nSite para criação da conta: https://github.com/"
+  },
+  {
+    "objectID": "summary.html#instalação-do-git",
+    "href": "summary.html#instalação-do-git",
+    "title": "2  Configurações Iniciais",
+    "section": "2.2 Instalação do Git",
+    "text": "2.2 Instalação do Git\nInstalação se dá pelo link: https://git-scm.com/download/win\nApenas escolha o sistema operacional que seja compatível com seu equipamento.\n\n2.2.1 Configurações do Git\nÉ necessário conceder ao git suas “credenciais” para acessar seu repositório remoto. Abaixo estarão códigos que devem ser rodados na Linha de Comando (Command Line. Também chamado de CMD, terminal ou prompt de comando):\n\nConfiguração do user que irá aparecer nos commits:\n\ngit config –global user.name “Seu Usuario”\n\nAqui é o mesmo email usado na criação da conta no GitHub:\n\ngit config –global user.email “seu_email@gmail.com.br”\nMais informações de configuração inicial."
+  },
+  {
+    "objectID": "comandline.html#comandos-linux",
+    "href": "comandline.html#comandos-linux",
+    "title": "3  Lista de Comandos Importantes",
+    "section": "3.1 Comandos linux",
+    "text": "3.1 Comandos linux\nÉ essencial ter uma base de comandos do linux para conseguir trabalhar no CMD de forma direta. Não só o prompt de comandos do dispositivo, mas também o git bash, o terminal do R e do Jupyter notebook e do software Anaconda, são exemplos de terminais que são usados com as linguagens do linux.\nPor meio desses atalhos do CMD, conseguimos acompanhar melhor quais arquivos estão numa pasta, e assim, agilizar o versionamento de arquivos.\nAbaixo, tem-se exemplos do uso de alguns códigos no terminal.\n\nPara os terminais, conseguimos alterar um pouco a estética do prompt de comando usando o bash. Isso é comum no linux, e facilita a visualização. Mas não muda nada estar ou não com o bash ativado.\n\n\nbash\n\nPara sair do modo bash:\n\nexit\n\n\nListagem dos arquivos na pasta\n\n\nls\n\n\nls -l\n\n\nPara ver listagem dos arquivos na pasta que estão ocultos, normalmente a pasta .git criada pelo próprio sistema GIT para guardar os metadados de versionamento\n\n\nls -la\n\n\nPrinta caminho do diretório atual (print work directory):\n\n\npwd\n\n\nCriar um diretório localmente (make directory):\n\n\nmkdir nome-diretorio\n\n\nMudar de diretório (change directory)\n\n\ncd nome-diretorio/\n\n\nVoltar para o diretório anterior\n\n\ncd ..\n\nComandos úteis do Vim:\n\nCriar um arquivo simples direto do terminal\n\nvim arquivo.extensao\nExemplo:\n\nvim arquivo.py"
+  },
+  {
+    "objectID": "comandline.html#comandos-git",
+    "href": "comandline.html#comandos-git",
+    "title": "3  Lista de Comandos Importantes",
+    "section": "3.2 Comandos git",
+    "text": "3.2 Comandos git\n\nVisualizar versão do git instalado no computador local:\n\n\ngit --version\n\n\nInicialização de repositório local para monitoramento\n\n\ngit init\n\n\nClonar um repositório remoto:\n\n\ngit clone https://github.com/gurkanakdeniz/example-flask-crud.git\n\n\nAdicionar seu repositório remoto. Por padrão, nomeamos esse repositório como origin:\n\n\ngit remote add origing link_do_seu_repositorio\n\n\ngit origin\n\nVisualizar repositórios remotos associados:\n\ngit remote -v\n\n\nCriar nova branch:\n\n\ngit checkout -b novabranch\n\n\nEntrar no ambiente de desenvolvimento de uma branch específica\n\n\ngit checkout nome_da_branch\n\nExemplo: git checkout main ou git checkout develop\n\nMostrar em qual branch estamos trabalhando:\n\n\ngit branch\n\n\nVerificar qual a situação atual das alterações. Status de versionamento:\n\n\ngit status\n\n\nMostra diferença do que foi alterado em um arquivo versionado. Exibe em vermelho e começando com um - as linhas removidas e em verde começando com um + as novas linhas\n\n\ngit diff\n\n\nAdicionar arquivo para ser monitorado\n\nPodemos adcionar todo diretório para ser monitorado:\n\ngit add .\n\nOu apenas um arquivo (é importante colocar sua extensão)\n\ngit add meu-arquivo.txt\n\n\nExcluir um arquivo (remove):\n\n\ngit rm\n\n\nDesfazer marcação de um arquivo que foi monitorado (em add):\n\n\ngit restore\n\n\nCommitar um arquivo com mensagem de descrição (boa prática):\n\n\ngit commit nome-arquivo -m \"Descricao aqui\"\n\nPara comitar tudo, usar a flag -a que indica all:\n\ngit commit -a\n\n\nEnviando um arquivo local para o remoto = PUSH\n\n\ngit push nome-da-pasta-remota nome-da-branch\n\n\n\n\n\n\n\nNota:\n\n\n\no Git geralmente pergunta se você quer definir origin  (ou seja, origin main) como o padrão, para que você não precise ficar escrevendo sempre git push origin main, por exemplo.\n\n\n\nAtualiza seu repositório local com o arquivo mais recente do repositório remoto. Remoto para local = PULL\n\n\ngit pull\n\n\nVoltar ao estado do último commit feito (caso o presente commit queira ser revertido):\n\nUsa-se o id do commit aqui.\n\ngit reset id-do-commit\n\n\nReverter alterações feitas em um commit, parecido com voltar a versão anterior:\n\n\ngit revert\n\n\nHistórico de commits, inclusive autor do commit:\n\n\ngit log\n\nHistórico apenas para um arquivo especifico\n\ngit log --follow nome-arquivo\n\n\nImportantíssimo: para arquivos que não desejamos que que façam parte do repositório em si, sendo apenas disponíveis localmente para quem estiver executando o sistema. nota: Vamos ver um exemplo posteriormente.\n\n\ngit add .gitignore\n\n\nConsultar histórico do que foi feito na linha de comando:\n\n\ngit blame nome-arquivo"
+  },
+  {
+    "objectID": "comandline.html#considerações-de-comandos",
+    "href": "comandline.html#considerações-de-comandos",
+    "title": "3  Lista de Comandos Importantes",
+    "section": "3.3 Considerações de comandos",
+    "text": "3.3 Considerações de comandos"
+  },
+  {
+    "objectID": "coding.html#resolução-de-conflitos",
+    "href": "coding.html#resolução-de-conflitos",
+    "title": "4  Exemplo",
+    "section": "4.1 Resolução de conflitos",
+    "text": "4.1 Resolução de conflitos\nApós dar um git merge de uma branch de desenvolvimento para a main, podemos ter conflitos se outras pessoas estiverem trabalhando sob o mesmo arquivo ou a versão utilizada localmente não estiver atualizada com o repositório remoto"
+  },
+  {
+    "objectID": "coding.html#teste",
+    "href": "coding.html#teste",
+    "title": "4  Exemplo",
+    "section": "4.2 Teste",
+    "text": "4.2 Teste"
+  },
+  {
+    "objectID": "practice.html#tags",
+    "href": "practice.html#tags",
+    "title": "5  Boas práticas",
+    "section": "5.1 Tags",
+    "text": "5.1 Tags\nPara uso de versionamento semântico:\nSaber mais sobre versionamento semântico"
+  }
+]
